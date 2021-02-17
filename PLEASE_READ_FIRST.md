@@ -60,12 +60,12 @@ Please use the following endpoint: `https://api.simplyrets.com/properties`
     }]
 ```
 - Store and maintain a “favorite counter” in MongoDB for each property listing. The favorite counter tracks how many people marked a listing as favorite.
--  Add the following GraphQL functionality:
-  -   A GraphQL mutation to increment the favorite counter by 1. This endpoint would be called when someone clicks on the “Mark as favorite” button for a listing. But you do not need to implement a frontend interface.
-  -   A GraphQL query that is fetching data from the SimplyRETS API endpoint ([documentation here](https://docs.simplyrets.com/api/index.html#/Listings/get_properties)). For each result, you need to inject the “favorite counter” from MongoDB.
+- Add the following GraphQL functionality:
+  - A GraphQL mutation to increment the favorite counter by 1. This endpoint would be called when someone clicks on the “Mark as favorite” button for a listing. But you do not need to implement a frontend interface.
+  - A GraphQL query that is fetching data from the SimplyRETS API endpoint ([documentation here](https://docs.simplyrets.com/api/index.html#/Listings/get_properties)). For each result, you need to inject the “favorite counter” from MongoDB.
     - We should be able to filter properties by city.
     - You do not need to add pagination support.
-    -  SimplyRETS endpoint: [https://api.simplyrets.com/properties](https://api.simplyrets.com/properties)    (API login: “simplyrets” / API token: “simplyrets”)
+    - SimplyRETS endpoint: [https://api.simplyrets.com/properties](https://api.simplyrets.com/properties)    (API login: “simplyrets” / API token: “simplyrets”)
     - Example:
 ```
 query {
