@@ -49,7 +49,7 @@ Please use the following endpoint: `https://api.simplyrets.com/properties`
 # Acceptance criteria
 - Use  [Express.js](https://github.com/expressjs/express) as a Node.js HTTP framework
 - Use [Apollo Server](https://www.apollographql.com/docs/apollo-server/getting-started/) as your graphql framework. You can use GraphiQL to interact with your endpoints, you **do not** have to build a client interface. We have included both express & apollo server in package.json for you.
-- Add Bearer HTTP Authentication to restrict access to all GraphQL endpoints. You can manually create a simple collection in MongoDB with 2 users. No need to add, edit, or delete users.
+- Add Bearer HTTP Authentication to restrict access to all GraphQL endpoints. We have seeded the following two users into the users collection for you. No need to add, edit, or delete users.
 ```
     [{
       "email": "user1@sideinc.com",
