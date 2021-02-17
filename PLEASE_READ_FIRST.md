@@ -31,7 +31,7 @@ In this boilerplate, you will find:
   - You shouldn't have to touch this file.
   - It's important to start the DB first before running your app
   - The database uri: *mongodb://127.0.0.1:27017/properties?*
-  - This is a mongod istance that spawns  on the side of your application. **NOTE**: the data does not persist when you shut down the server. You'll have to seed any data on restart of the database if you did so.
+  - This is a mongod istance that spawns  on the side of your application. **NOTE**: the data does not persist when you shut down the server. We seed two users with access tokens on database start. Please read Acceptance Criteria below for more details
 - All the types from the SimplyRETS API ready to use with GraphQL: `types/index.js`
 - A `README.md` file to document your comments and design decisions
 - Inside the `package.json`, we added the following packages:
