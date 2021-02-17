@@ -14,8 +14,14 @@ Before getting started, please read this document carefully.
 With Node 14 installed, run the following commands:
 ```  
 $ npm install  
-$ npm start:db 
-$ npm start:app
+$ npm run start:db 
+$ npm run start:app
+
+or 
+
+$ yarn install  
+$ yarn start:db 
+$ yarn start:app
 ```  
 Navigate to `http://localhost:4000/graphql`.
 ## What will you find inside this boilerplate
