@@ -100,5 +100,5 @@ query {
 
 # Submission
 
-Once you are satisfied with your assignment, please publish your code and your README file to a Git repository. Please ignore the node_modules folder.  
+Once you are satisfied with your assignment, please publish your code (ignore the `node_modules` folder) to a Git repository and send the repository link to `eng.assignment@sideinc.com`.  
 
