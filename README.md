@@ -1,3 +1,6 @@
+# Assumptions
+Favorite counter is related to a `listing/property` through `mlsId`
+
 # Getting started
 
 1.)
