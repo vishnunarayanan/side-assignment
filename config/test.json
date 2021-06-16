@@ -1,0 +1,3 @@
+{
+  "db": "mongodb://localhost:58003/properties_test"
+}

@@ -1,18 +1,51 @@
-const express = require('express');
+const winston = require("winston");
+const express = require("express");
 const app = express();
+const { ApolloServer } = require("apollo-server-express");
+//
+const typeDefs = require("./types");
+const resolvers = require("./resolvers");
 
-// Please use apollo server to implement your graphql query
-// const { ApolloServer } = require('apollo-server-express');
-// const server = new ApolloServer({
-//  //...
-// });
-// server.applyMiddleware({ app, path:"/graphql" });
+// models
+const { Listing } = require("./models/listing");
+const { User } = require("./models/user");
 
-/** Please remove me line 11-14 **/
-app.get('*', (req, res, next) => {
-    res.send("Good luck! 😀")
-});
+// APIs
+const MLSAPI = require("./datasources/mls-api");
+const ListingAPI = require("./datasources/listing-api");
+const UserAPI = require("./datasources/user-api");
+const mlsAPI = new MLSAPI();
+const userAPI = new UserAPI(User);
+const listingAPI = new ListingAPI(Listing);
 
-app.listen({ port: 4000 }, () =>
-    console.log(`Listening on http://localhost:4000/graphql`)
-);
+//
+require("./startup/logging")();
+require("./startup/db")();
+
+// middleware
+const auth = require("./middleware/auth");
+
+async function startApolloServer() {
+  const server = new ApolloServer({
+    typeDefs,
+    resolvers,
+    dataSources: () => {
+      return {
+        mlsAPI,
+        listingAPI,
+        userAPI,
+      };
+    },
+    context: async ({ req, res }) => {
+      return await auth(userAPI, req, res);
+    },
+  });
+  await server.start();
+
+  server.applyMiddleware({ app, path: "/graphql" });
+}
+startApolloServer();
+const server = app.listen({ port: 4000 }, () => {});
+winston.info(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
+
+module.exports = server;
