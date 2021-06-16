@@ -46,6 +46,6 @@ async function startApolloServer() {
 }
 startApolloServer();
 const server = app.listen({ port: 4000 }, () => {});
-winston.info(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
+winston.info(`🚀 Server ready at http://localhost:4000/graphql`);
 
 module.exports = server;

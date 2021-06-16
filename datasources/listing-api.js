@@ -1,4 +1,4 @@
-const { Listing } = require("../models/listing");
+const { Listing, validateListing } = require("../models/listing");
 const { MongoDataSource } = require("apollo-datasource-mongodb");
 
 /**
@@ -32,7 +32,13 @@ class ListingAPI extends MongoDataSource {
       );
       return listing.favoriteCount;
     } else {
-      const listing = new Listing({ mlsId, favoriteCount: 1 });
+      const doc = { mlsId, favoriteCount: 1 };
+      const validationResult = validateListing(doc);
+      if (validationResult.error) {
+        throw new Error(validationResult.error);
+      }
+
+      const listing = new Listing(doc);
       await listing.save();
       return listing;
     }

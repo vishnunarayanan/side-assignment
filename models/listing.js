@@ -16,6 +16,7 @@ const Listing = mongoose.model(
 function validateListing(listing) {
   const schema = Joi.object({
     favoriteCount: Joi.number().min(0),
+    mlsId: Joi.string().required(),
   });
 
   return schema.validate(listing);
