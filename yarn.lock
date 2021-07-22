@@ -967,13 +967,6 @@
     "@types/bson" "*"
     "@types/node" "*"
 
-"@types/mongoose@^5.7.28":
-  version "5.11.97"
-  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.11.97.tgz#80b0357f3de6807eb597262f52e49c3e13ee14d8"
-  integrity sha512-cqwOVYT3qXyLiGw7ueU2kX9noE8DPGRY6z8eUxudhXY8NZ7DMKYAxyZkLSevGfhCX3dO/AoX5/SO9lAzfjon0Q==
-  dependencies:
-    mongoose "*"
-
 "@types/node-fetch@^2.5.10":
   version "2.5.10"
   resolved "https://registry.yarnpkg.com/@types/node-fetch/-/node-fetch-2.5.10.tgz#9b4d4a0425562f9fcea70b12cb3fcdd946ca8132"
@@ -1141,13 +1134,12 @@ apollo-cache-control@^0.14.0:
     apollo-server-env "^3.1.0"
     apollo-server-plugin-base "^0.13.0"
 
-apollo-datasource-mongodb@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/apollo-datasource-mongodb/-/apollo-datasource-mongodb-0.4.2.tgz#793c33b7c69307003bffb53891edc78572a78988"
-  integrity sha512-DCQMspcw73W4rZC+wHaxCCfaRssjofIiXW5ZZb4g/S9vylOO++qPDgRjXmCfQXX+CIDkwcYsdNYpbUNHg8Or9g==
+apollo-datasource-mongodb@^0.4.6:
+  version "0.4.6"
+  resolved "https://registry.yarnpkg.com/apollo-datasource-mongodb/-/apollo-datasource-mongodb-0.4.6.tgz#8c3f32d49fe62be8a3144259a83ef9d65bef41f1"
+  integrity sha512-YBnPBu9umBnqQwYlTANn7dkaCdMb0o8QA8VVsw2v+wxExWSLmBrzSl4X3fExxgYZFykmLKnUa/cxUG6C+DYzHA==
   dependencies:
     "@types/mongodb" "^3.5.27"
-    "@types/mongoose" "^5.7.28"
     apollo-datasource "^0.3.1"
     apollo-server-caching "^0.3.1"
     apollo-server-errors "^2.4.1"
@@ -3367,7 +3359,7 @@ mongoose-legacy-pluralize@1.0.2:
   resolved "https://registry.yarnpkg.com/mongoose-legacy-pluralize/-/mongoose-legacy-pluralize-1.0.2.tgz#3ba9f91fa507b5186d399fb40854bff18fb563e4"
   integrity sha512-Yo/7qQU4/EyIS8YDFSeenIvXxZN+ld7YdV9LqFVQJzTLye8unujAWPZ4NWKfFA+RNjh+wvTWKY9Z3E5XM6ZZiQ==
 
-mongoose@*, mongoose@^5.12.13:
+mongoose@^5.12.13:
   version "5.12.14"
   resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.12.14.tgz#610460f0725acf67b3eefcd92f0a48a08919d51b"
   integrity sha512-1lMRY8cfGYFWHqe5DLnVgNQDyD0fEbSoWIQe9Mllt/ZtayZ5XUFQt+o5VKrB44vsT5cLNzgwEFO0NvwTwqLluQ==
